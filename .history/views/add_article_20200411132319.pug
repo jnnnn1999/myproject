@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container.emp-profile
+    form(method='POST', action='/articles/add')
+      h1 Add Articles
+      #form-group
+        input.form-control(name='title', type='text', placeholder='Title')
+      #form-group
+        br
+        textarea.form-control(name='body', placeholder='Body')
+      br
+      input.btn.login-btn(type='submit',value='Submit')

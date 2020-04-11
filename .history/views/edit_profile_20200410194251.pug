@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  form#home-form(method='POST', action='/articles/edit/'+article._id)
+    h1 Edit profile
+    #form-group
+      label Name:
+      form-control(name='kkkkkk', type='text',value=user.name)
+      br
+    #form-group
+      label Email:
+      form-control(name='email', type='text',value=user.email)
+      br
+    #form-group
+      label Username:
+      form-control(name='username', type='text',value=user.username)
+      br
+    #form-group
+      label Password:
+      form-control(name='password', type='password',value=user.password)
+      br
+    #form-group
+      label Confirm Password:
+      form-control(name='email', type='text',value=user.email)
+      br
+    input.btn.login-btn(type='submit',value='Submit')
+
+

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container.emp-profile
+    form(method='POST', action='/articles/editprofile/'+user._id)
+      h1 Edit books
+      #form-group
+        label Title:
+        input.form-control(name='title', type='text',value=article.title)
+        br
+      #form-group
+        label Body:
+        textarea.form-control(name='body')= article.body
+      br
+      input.btn.login-btn(type='submit',value='Submit')

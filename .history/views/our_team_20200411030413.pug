@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon-16x16.png')
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/css/style1.css')
+    link(rel='stylesheet' href='/css/style2.css')
+    title Articles By the Ocean
+
+  body
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.scrolling-navbar
+      a.navbar-brand(href='#')
+        strong Navbar
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') Link
+          li.nav-item
+            a.nav-link(href='#') Profile
+    .view.intro.hm-purple-light(style='height: 400px;')
+
+    .container
+      != messages('message', locals)
+      if errors
+        each error, i in errors
+          div(class="alert alert-danger") #{error.msg}
+      block content
+      br
+           
+      
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')
+
+
+block content
+  .container.emp-profile
+    form(action=' ')
+        h1 Our teams
+    .row
+      .col-md-4
+        .profile-img
+          img(src='https://scontent.fcnx2-1.fna.fbcdn.net/v/t1.0-9/p960x960/40531764_2001447189894743_3946805805193363456_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_eui2=AeHCVOX3-Skv1FapoZL2lpfpa-p3TokHDt5r6ndOiQcO3rJmOXIVKf6PvUpXvtWlc-599oVT_rlJtnayKK2wpeb2&_nc_oc=AQkN5hZRD5turh4kKVrJoB9sfXhGCV5x_MZcwa6S4HzVneZOzHzZmRbQR7z9oKzMQxM&_nc_ht=scontent.fcnx2-1.fna&_nc_tp=6&oh=92abbef86ee4f70eb6b550f6072a4585&oe=5EB63A88', classname='card-img-top', alt='...', width='200')
+      .col-md-6
+        .profile-head
+          h5
+            | Developer information
+            br
+            | Jirapa Singnoi (610610574)
+          h6
+            | Student
+    br
+    br
+    .row
+      .col-md-4
+        .profile-img
+          img(src='https://scontent.fcnx2-1.fna.fbcdn.net/v/t1.0-9/p960x960/40531764_2001447189894743_3946805805193363456_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_eui2=AeHCVOX3-Skv1FapoZL2lpfpa-p3TokHDt5r6ndOiQcO3rJmOXIVKf6PvUpXvtWlc-599oVT_rlJtnayKK2wpeb2&_nc_oc=AQkN5hZRD5turh4kKVrJoB9sfXhGCV5x_MZcwa6S4HzVneZOzHzZmRbQR7z9oKzMQxM&_nc_ht=scontent.fcnx2-1.fna&_nc_tp=6&oh=92abbef86ee4f70eb6b550f6072a4585&oe=5EB63A88', classname='card-img-top', alt='...', width='200')
+      .col-md-6
+        .profile-head
+          h5
+            | Developer information
+            br
+            | Jirapa Singnoi (610610574)
+          h6
+            | Student
+
+
+
+

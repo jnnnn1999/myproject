@@ -1,0 +1,38 @@
+header.top-navbar
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container
+      a.navbar-brand(href='index.html')
+        img(src='images/logo-seo.png', alt='')
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbars-seo', aria-controls='navbars-rs-food', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbars-seo.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='index.html') Home
+          li.nav-item
+            a.nav-link(href='about.html') About Us
+          li.nav-item
+            a.nav-link(href='case-study.html') Case Study
+          li.nav-item.dropdown
+            a#dropdown-a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown') Services 
+            .dropdown-menu(aria-labelledby='dropdown-a')
+              a.dropdown-item(href='services.html') Search Engine Optimization
+              a.dropdown-item(href='services.html') Reporting
+              a.dropdown-item(href='services.html') Email Marketing
+              a.dropdown-item(href='services.html') Website Development
+              a.dropdown-item(href='services.html') Social Media Marketing
+              a.dropdown-item(href='services.html') Pay Per Click
+          li.nav-item
+            a.nav-link(href='pricing.html') Pricing
+          li.nav-item
+            a.nav-link(href='contact.html') Contact
+
+
+block content
+  .container.emp-profile
+    form(action=' ')
+      h1 Articles
+      ul.list-group
+        each article, i in articles
+          li.list-group-item
+            a(href="/articles/"+article._id)=article.title

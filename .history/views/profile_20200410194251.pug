@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    form#login-form(method='POST',action='/profiles/add')
+        h5 = name
+        h5 = email
+        h5 = username
+        a.btn.btn-warning(href='/profiles/edit/') Edit
+  

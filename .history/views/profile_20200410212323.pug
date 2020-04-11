@@ -1,0 +1,107 @@
+extends layout
+
+block content
+.container.emp-profile
+  form(method='post')
+    .row
+      .col-md-4
+        .profile-img
+          img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog', alt='')
+          .file.btn.btn-lg.btn-primary
+            | Change Photo
+            input(type='file', name='file')
+      .col-md-6
+        .profile-head
+          h5
+            | Kshiti Ghelani
+          h6
+            | Web Developer and Designer
+          p.proile-rating
+            | RANKINGS : 
+            span 8/10
+          ul#myTab.nav.nav-tabs(role='tablist')
+            li.nav-item
+              a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') About
+            li.nav-item
+              a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Timeline
+      .col-md-2
+        input.profile-edit-btn(type='submit', name='btnAddMore', value='Edit Profile')
+    .row
+      .col-md-4
+        .profile-work
+          p WORK LINK
+          a(href='') Website Link
+          br
+          a(href='') Bootsnipp Profile
+          br
+          a(href='') Bootply Profile
+          p SKILLS
+          a(href='') Web Designer
+          br
+          a(href='') Web Developer
+          br
+          a(href='') WordPress
+          br
+          a(href='') WooCommerce
+          br
+          a(href='') PHP, .Net
+          br
+      .col-md-8
+        #myTabContent.tab-content.profile-tab
+          #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+            .row
+              .col-md-6
+                label User Id
+              .col-md-6
+                p Kshiti123
+            .row
+              .col-md-6
+                label Name
+              .col-md-6
+                p Kshiti Ghelani
+            .row
+              .col-md-6
+                label Email
+              .col-md-6
+                p kshitighelani@gmail.com
+            .row
+              .col-md-6
+                label Phone
+              .col-md-6
+                p 123 456 7890
+            .row
+              .col-md-6
+                label Profession
+              .col-md-6
+                p Web Developer and Designer
+          #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+            .row
+              .col-md-6
+                label Experience
+              .col-md-6
+                p Expert
+            .row
+              .col-md-6
+                label Hourly Rate
+              .col-md-6
+                p 10$/hr
+            .row
+              .col-md-6
+                label Total Projects
+              .col-md-6
+                p 230
+            .row
+              .col-md-6
+                label English Level
+              .col-md-6
+                p Expert
+            .row
+              .col-md-6
+                label Availability
+              .col-md-6
+                p 6 months
+            .row
+              .col-md-12
+                label Your Bio
+                br
+                p Your detail description

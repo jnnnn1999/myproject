@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form#home-form(action='')
+    h1 Books
+    ul.list-group
+      each article, i in articles
+        li.list-group-item
+          a(href="/articles/"+article._id)=article.title

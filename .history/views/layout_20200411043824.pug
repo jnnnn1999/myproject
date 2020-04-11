@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon-16x16.png')
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/css/style1.css')
+    link(rel='stylesheet' href='/css/style2.css')
+    title Articles By the Ocean
+
+  body
+    secton.site
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+      img(src='/img/android-icon-192x192.png', width='48', height='48')
+      a.navbar-brand(href='/')  Articles By the Forest
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarsExampleDefault.collapse.navbar-collapse
+        ul.navlinks
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item.active
+            a.nav-link(href='/articles/ourteam')
+              | Our team 
+          if user
+            li.nav-item
+              a.nav-link(href='/articles/add') Add books
+          if user
+            li.nav-item
+              a.nav-link(href='/articles/profile') Profile  
+        ul.nav.navbar-nav.navbar-right
+          if user
+            li 
+              a.nav-link(href='/users/logout') Logout
+          else
+            li
+              a.nav-link(href='/users/register') Register
+            li
+              a.nav-link(href='/users/login') Login
+              
+
+    .container
+      != messages('message', locals)
+      if errors
+        each error, i in errors
+          div(class="alert alert-danger") #{error.msg}
+      block content
+      br
+           
+      
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container.emp-profile
+  .container.emp-profile
+    form(action='')
+      h1= article.title
+      h5 Written by #{author}
+      br
+      p= article.body
+      if user
+        hr
+        if user.id ==article.author
+          a.btn.btn-warning(href='/articles/edit/'+article._id) Edit
+          br
+          br
+          a.btn.btn-danger.delete-article(href='#',data-id=article._id) Delete

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container.emp-profile
+    form(action=' ')
+      img(src='/img/android-icon-192x192.png', width='48', height='48') 
+      a.navbar-brand(href='/')  Articles By the Forest
+  .container.emp-profile
+    form(action=' ')
+      ul.list-group
+        each article, i in articles
+          li.list-group-item
+            a(href="/articles/"+article._id)=article.title

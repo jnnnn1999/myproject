@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container.emp-profile
+    form(action=' ')
+      img(src='/img/article.png', width='200', height='200', background-size: cover) 
+  .container.emp-profile
+    form(action=' ')
+      ul.list-group
+        each article, i in articles
+          li.list-group-item
+            a(href="/articles/"+article._id)=article.title
